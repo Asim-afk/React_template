@@ -1,0 +1,117 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.navTitle {
+  color: whitesmoke;
+  font-size: 24px;
+  height: 50px;
+  border-bottom: 1px solid rgba(168, 216, 219, 0.532);
+}
+
+.navElement {
+  color: aliceblue;
+  font-size: 20px;
+  border: none;
+  background-color: inherit;
+  display: block;
+  width: 100%;
+  padding: 10px 0px;
+  transition: color 0.3s ease;
+}
+.sideNav {
+  overflow-y: scroll;
+  transition: transform 0.3s ease-out;
+  scrollbar-color: darkgray lightgray;
+}
+
+.sideNav.visible {
+  transform: translateX(-250px);
+}
+.adminOutlet {
+  padding: 16px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* adjust the shadow values as per your preference */
+}
+
+.navElement:hover {
+  color: aliceblue;
+}
+
+.adminNavTop {
+  height: 50px;
+  padding: 0px 20px;
+  position: fixed;
+}
+.appHeadName {
+  display: flex;
+  flex-direction: column; /* Stack border above text */
+  margin-top: 15px;
+  padding-bottom: 15px;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Required for pseudo-element */
+  margin-bottom: 10px;
+}
+
+.appHeadName::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 75%;
+  transform: translateX(-80%);
+  width: 80%;
+  height: 0.1rem;
+  background-color: rgb(143, 139, 139);
+}
+.appbar {
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2);
+  height: "100vh !important";
+}
+
+.box-shadow {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3) !important;
+}
+.ant-layout-sider-zero-width-trigger.ant-layout-sider-zero-width-trigger-left {
+  top: 0px !important;
+  z-index: 100 !important;
+}
+.container {
+  margin: 50px 30px 0px 30px;
+  height: fit-content;
+}
+.breadCrumb {
+  color: gray;
+  font-size: 18px;
+  margin-left: 100px;
+}
+.footer {
+  color: grey;
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 992px) {
+  .appbar {
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    position: absolute !important;
+    z-index: 100 !important;
+  }
+  .container {
+    margin: 10px;
+  }
+  .breadCrumb {
+    color: gray;
+    font-size: 18px;
+    margin-left: 50px;
+  }
+  .footer {
+    color: grey;
+    font-size: 14px;
+    position: relative;
+  }
+  .ant-layout-sider-zero-width-trigger.ant-layout-sider-zero-width-trigger-left {
+    top: 0px !important;
+  }
+}

@@ -1,0 +1,12 @@
+.footer {
+  color: grey;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 992px) {
+  .footer {
+    font-size: 1rem;
+  }
+}
